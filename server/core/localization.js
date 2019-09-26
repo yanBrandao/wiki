@@ -44,6 +44,7 @@ module.exports = {
    * @param {String} namespace Namespace
    */
   async getByNamespace(locale, namespace) {
+    locale = locale.toLowerCase()
     if (this.engine.hasResourceBundle(locale, namespace)) {
       let data = this.engine.getResourceBundle(locale, namespace)
       return _.map(dotize.convert(data), (value, key) => {
@@ -53,6 +54,7 @@ module.exports = {
         }
       })
     } else {
+      console.log("Locale: " + locale + " Namespace: " + namespace)
       throw new Error('Invalid locale or namespace')
     }
   },
