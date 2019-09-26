@@ -23,14 +23,12 @@ port: 3000
 db:
   type: postgres
   # PostgreSQL / MySQL / MariaDB / MS SQL Server only:
-  host: localhost
+  host: wikijs-postgres
   port: 5432
-  user: wikijs
-  pass: wikijsrocks
-  db: wiki
+  user: postgres
+  pass: Itbam2019*
+  db: postgres
   ssl: false
-  # SQLite only:
-  storage: path/to/database.sqlite
 
 #######################################################################
 # ADVANCED OPTIONS                                                    #
